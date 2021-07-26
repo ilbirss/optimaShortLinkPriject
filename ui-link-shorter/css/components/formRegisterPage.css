@@ -36,12 +36,12 @@
     flex-direction:row;
     justify-content: center;
     align-items: center;
-    width:135px;
+    width:197px;
     height:42px;
     background:#7fc3f5;
     color:white;
     border-radius:7px;
-    margin-left:170px;
+    margin-left:150px;
     margin-top:10px;
     border:1px solid #000000;
     box-sizing: border-box;
@@ -50,27 +50,18 @@
     font-size:18px;
     line-height:22px;
 }
-.form__linkRegister {
-    margin-top:20px;
-    margin-left: 78px;
+
+.form__linkColor {
+    color:#057AE6;
+}
+.form__linkLoggIn {
+    margin:25px 0px 0px 133px;
     font-family: Montserrat;
     font-style:normal;
     font-weight: 500;
     font-size:18px;
     line-height:22px;
     color:#000000;
-}
-.form__linkColor {
-    color:#057AE6;
-}
-.form__linkForgetPassword {
-    margin:25px 0px 0px 150px;
-    font-family: Montserrat;
-    font-style:normal;
-    font-weight: 500;
-    font-size:18px;
-    line-height:22px;
-    color:#057AE6;
 }
 .form__img {
     position: absolute;
