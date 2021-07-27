@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="../css/components/formPosition.css">
+  <link rel="stylesheet" href="../css/components/formRegisterPage.css">
+  <link rel="stylesheet" href="../css/components/homePage.css">
+
+    <title>Title</title>
+</head>
+<body class="body">
+<header class="headerHomePage">
+  <div class="headerHomePage__logo">LS</div>
+  <input class="headerHomePage__button" type="submit" value="Выйти">
+</header>
+<div id="sub" class="subHeader">
+  <div class="subHeader__text">Мои ссылки</div>
+  <input id="btn-Modal" class="subHeader__button" type="submit" value="Создать новую">
+</div>
+<div id="listPosition" class="list-position list">
+  <div class="list__flexPosition">
+    <ul class="list__action">
+      <li>fdghdghdthethethethrtnrtnrtnrtnfgjnfgjnf</li>
+      <li>\yjryjryjryj</li>
+      <li>9rjrtjrjrtj</li>
+      <li>\</li>
+      <li>э</li>
+    </ul>
+    <div class="list__buttonAction">
+      <input class="list__buttonBlue" type="submit" value="Перейти">
+      <input class="list__buttonRed" type="submit" value="Удалить">
+    </div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="backdrop"></div>
+  <div class="inner">
+    <div class="modal__header">
+      <div class="modal__title">Создание ссылки</div>
+      <span onclick="closeModal()" class="modal__close"></span>
+    </div>
+    <div class="modal__link">
+      <label class="modal__linkName" for="linkName">Название</label>
+      <input class="modal__linkInput" type="text" id="linkName" name="linkName" required>
+    </div>
+    <div class="modal__link">
+      <label class="modal__linkName" for="originLink">Оригинальная ссылка</label>
+      <input type="text" id="originLink" class="modal__linkInput" required>
+    </div>
+    <div>
+      <button class="modal__btnSubmit" type="submit" onclick="ValidateEmail()">Создать</button>
+    </div>
+    <div class="modal-block">
+      <div class="modal-block__text">Ваша ссылка создана, можете</div>
+      <span class="modal-block__goBackTo"> перейти по <a class="modal-block__goBackToList" href="#"> ней</a></span>
+    </div>
+  </div>
+</div>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script type="text/javascript" src="../scripts/homePage.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity=
+        "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity=
+        "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity=
+        "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

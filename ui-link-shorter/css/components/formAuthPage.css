@@ -50,6 +50,13 @@
     font-weight: 500;
     font-size:18px;
     line-height:22px;
+    cursor: pointer;
+}
+.form__button:active {
+    opacity: 0.1;
+}
+.form__button:hover, .form__linkColor:hover, .form__linkForgetPassword:hover {
+    opacity: 0.5;
 }
 .form__linkRegister {
     margin-top:20px;
