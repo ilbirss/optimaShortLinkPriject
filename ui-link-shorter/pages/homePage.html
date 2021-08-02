@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="../css/body.css">
   <link rel="stylesheet" href="../css/index.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quando&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/components/formPosition.css">
   <link rel="stylesheet" href="../css/components/formRegisterPage.css">
   <link rel="stylesheet" href="../css/components/homePage.css">
@@ -14,26 +17,14 @@
 <body class="body">
 <header class="headerHomePage">
   <div class="headerHomePage__logo">LS</div>
-  <input class="headerHomePage__button" type="submit" value="Выйти">
+  <input class="headerHomePage__button" type="submit" onclick="logOut(event)" value="Выйти">
 </header>
 <div id="sub" class="subHeader">
   <div class="subHeader__text">Мои ссылки</div>
   <input id="btn-Modal" class="subHeader__button" type="submit" value="Создать новую">
 </div>
-<div id="listPosition" class="list-position list">
-  <div class="list__flexPosition">
-    <ul class="list__action">
-      <li>fdghdghdthethethethrtnrtnrtnrtnfgjnfgjnf</li>
-      <li>\yjryjryjryj</li>
-      <li>9rjrtjrjrtj</li>
-      <li>\</li>
-      <li>э</li>
-    </ul>
-    <div class="list__buttonAction">
-      <input class="list__buttonBlue" type="submit" value="Перейти">
-      <input class="list__buttonRed" type="submit" value="Удалить">
-    </div>
-  </div>
+<div id="listPosition" class="list-position list" >
+    <ul id="list"></ul>
 </div>
 <div id="modal" class="modal">
   <div class="backdrop"></div>
@@ -51,14 +42,15 @@
       <input type="text" id="originLink" class="modal__linkInput" required>
     </div>
     <div>
-      <button class="modal__btnSubmit" type="submit" onclick="ValidateEmail()">Создать</button>
+      <button id="btnCreateLink" class="modal__btnSubmit" type="submit">Создать</button>
     </div>
-    <div class="modal-block">
+    <div class="modal-block" id="modal__text">
       <div class="modal-block__text">Ваша ссылка создана, можете</div>
-      <span class="modal-block__goBackTo"> перейти по <a class="modal-block__goBackToList" href="#"> ней</a></span>
+      <span class="modal-block__goBackTo"> перейти по <a id="followLink" class="modal-block__goBackToList" href="#"> ней</a></span>
     </div>
   </div>
 </div>
+<script type="text/javascript" src="../scripts/common.js"></script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 <script type="text/javascript" src="../scripts/homePage.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity=

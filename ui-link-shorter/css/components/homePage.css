@@ -26,6 +26,11 @@
     color: #FFFFFF;
     border:none;
 }
+
+.headerHomePage__button:hover {
+    cursor: pointer;
+}
+
 .subHeader {
     display: flex;
     align-items: center;
@@ -61,12 +66,17 @@
     background: #FFFFFF;
     margin: 40px 68px 12px 44px;
 }
+.ddd{
+    width:400px;
+}
 .list__flexPosition {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-between;
+    width:650px;
     padding: 10px 39px 42px 10px;
-    margin-top:10px;
+    margin-top:20px;
     margin-bottom: 10px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -80,12 +90,12 @@
     line-height: 22px;
     color: #000000;
 }
+
 .list__buttonAction {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:15px;
-    margin-left: 20px;
+    margin-right: -20px;
 }
 .list__buttonBlue {
     padding: 10px;

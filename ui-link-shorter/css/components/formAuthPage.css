@@ -53,7 +53,7 @@
     cursor: pointer;
 }
 .form__button:active {
-    opacity: 0.1;
+    background-color: #7FE7F5FF;
 }
 .form__button:hover, .form__linkColor:hover, .form__linkForgetPassword:hover {
     opacity: 0.5;
