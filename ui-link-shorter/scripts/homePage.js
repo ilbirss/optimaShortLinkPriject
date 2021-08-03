@@ -1,34 +1,29 @@
 const $modal = document.getElementById("modal");
-const $subHeaderView = document.getElementById("sub")
-const $listPositionView = document.getElementById("listPosition")
+const $subHeaderView = document.getElementById("sub");
+const $listPositionView = document.getElementById("listPosition");
 const $btnModal = document.getElementById("btn-Modal");
-
 const $linkName = document.getElementById("linkName");
-const $originLink = document.getElementById("originLink")
-const $btnCreateLink = document.getElementById("btnCreateLink")
-const $modalText = document.getElementById("modal__text")
+const $originLink = document.getElementById("originLink");
+const $btnCreateLink = document.getElementById("btnCreateLink");
+const $modalText = document.getElementById("modal__text");
+const $followLink = document.getElementById('followLink');
 
-$btnModal.addEventListener("click", openModal)
+$btnModal.addEventListener("click", openModal);
 
 function openModal() {
     $modal.classList.add("opened");
     $subHeaderView.style.visibility = "hidden";
     $listPositionView.style.visibility = "hidden";
     $modalText.style.visibility = "hidden";
-
 }
-
 
 function closeModal() {
     $modal.classList.remove("opened")
     $subHeaderView.style.visibility = "visible";
     $listPositionView.style.visibility = "visible";
-
 }
 
 $btnCreateLink.addEventListener('click', create);
-
-const $followLink = document.getElementById('followLink');
 
 async function create(event) {
     event.preventDefault();
@@ -51,15 +46,12 @@ async function create(event) {
             window.location.reload(1);
         }, 0);
     }
-
 }
-
 
 async function deleteListElement(shortId) {
-    const fff = await request('ls/delete', "DELETE",{linkId: shortId})
+    await request('ls/delete', "DELETE",{linkId: shortId})
     document.getElementById(shortId).style.display = 'none';
 }
-
 
 const $linksContainer = document.getElementById('list');
 async function renderLinks() {
@@ -67,12 +59,6 @@ async function renderLinks() {
     $linksContainer.innerHTML = links.map(fromJsonToHtml).join('');
 }
 renderLinks();
-
-/*
-setTimeout(function renderLinks(){
-    window.location.reload(1);
-}, 5000);
-*/
 
 function fromJsonToHtml(link) {
     return `
@@ -103,24 +89,9 @@ function  logOut(e) {
     window.location.href= '../index.html';
 }
 
-/*
+document.addEventListener('DOMContentLoaded', () => {
+    if (!hasToken()) {
+        location.href = '../index.html'
+    }
+});
 
-const $linksContainer = document.getElementById('list');
-
-async function renderLinks() {
-    const links = await request('ls');
-
-    $linksContainer.innerHTML = links.map(fromJsonToHtml).join('');
-}
-
-function fromJsonToHtml(link) {
-    return `
-        <li>
-            Название: ${link.linkName}
-            Ссылка: <a href="${link.shortLink}">здесь</a>
-        </li>
-
-    `;
-}
-
-renderLinks();*/

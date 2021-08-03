@@ -21,7 +21,6 @@
     line-height:22px;
     color:#000000;
     margin-bottom: 5px;
-
 }
 .form__input {
     width:483px;
@@ -30,7 +29,17 @@
     box-sizing: border-box;
     border-radius:7px;
     margin-bottom:30px
-
+}
+#validation{
+    position: relative;
+    font-family: Montserrat, serif;
+    font-style:normal;
+    font-weight: 500;
+    font-size:15px;
+    line-height:22px;
+    color:red;
+    margin-bottom: 5px;
+    margin-left: 80px;
 }
 .form__button {
     display:flex;
@@ -84,5 +93,4 @@
     position: absolute;
     right: 0px;
     top: -75px;
-
 }

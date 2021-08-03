@@ -29,7 +29,6 @@
     box-sizing: border-box;
     border-radius:7px;
     margin-bottom:30px
-
 }
 .form__button {
     display:flex;
@@ -70,5 +69,4 @@
     position: absolute;
     right: 0px;
     top: -75px;
-
 }
