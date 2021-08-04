@@ -23,15 +23,15 @@ function closeModal() {
     $listPositionView.style.visibility = "visible";
 }
 
-$btnCreateLink.addEventListener('click', create);
+$btnCreateLink.addEventListener('click', createLink);
 
-async function create(event) {
+async function createLink(event) {
     event.preventDefault();
-    if (!$linkName.value) {
+    if(!$linkName.value) {
         console.log('Incorrect linkName');
         return;
     }
-    if (!isValidLink($originLink.value)) {
+    if(!isValidLink($originLink.value)) {
         console.log('Incorrect originLink');
         return;
     }
@@ -82,7 +82,7 @@ function fromJsonToHtml(link) {
     `;
 }
 
-function  logOut(e) {
+function logOut(e) {
     e.preventDefault();
     localStorage.removeItem('token');
     alert("You're logout now");

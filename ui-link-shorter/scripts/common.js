@@ -14,11 +14,11 @@ async function request(path, method = 'GET', body = {}) {
         headers: {'Content-Type': 'application/json; charset=UTF-8',
             'Authorization': localStorage.getItem('token') ? localStorage.getItem('token') : ''},
     }
-    if (method !== 'GET' && method !== 'HEAD') {
+    if(method !== 'GET' && method !== 'HEAD') {
         options.body = JSON.stringify(body);
     }
     const response = await fetch(`http://192.168.20.93:1207/${path}`, options);
-    if (response.status === 401) {
+    if(response.status === 401) {
         alert('frontEnd error')
     }
     if(response.status === 500) {

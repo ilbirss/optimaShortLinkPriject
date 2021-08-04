@@ -6,11 +6,11 @@ $registerBtn.addEventListener('click', register);
 
 async function register(event) {
     event.preventDefault();
-    if (!isValidEmail($emailRegister.value)) {
+    if(!isValidEmail($emailRegister.value)) {
         console.log('Incorrect Email');
         return;
     }
-    if ($passwordRegister.value.length < 8) {
+    if($passwordRegister.value.length < 8) {
         console.log('Short password');
         return;
     }
